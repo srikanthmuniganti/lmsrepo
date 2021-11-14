@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: srikanth_muniganti
+    url: jdbc:mysql://localhost:3306/booksdb
+    password: Sri7977kanth@
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: update
+  application:
+    name: authorization-service
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB   
+logging:
+  pattern:
+    console: '%d{dd-MM-yyy hh:mm:ss a} %c  %M  %m%n'
+server:
+  port: '8080'
+  error:
+    include-stacktrace: never
